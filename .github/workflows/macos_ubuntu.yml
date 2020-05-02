@@ -1,4 +1,4 @@
-name: Build MacOS
+name: Build Ubuntu
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Update apt indices
-        run: sudo apt update
+        run: sudo apt-get update
 
       - name: Install build tools
         run: sudo apt-get install build-essential
@@ -24,9 +24,9 @@ jobs:
 #          brew install qt
 #          brew link --force qt
 #
-#      - name: Check Qt version
-#        run: qmake --version
-#
+      - name: Check Qt version
+        run: qmake --version
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
