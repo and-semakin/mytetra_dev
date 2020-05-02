@@ -19,7 +19,7 @@ jobs:
       - name: Install Qt
         run: |
           brew install qt
-          brew link qt
+          brew link --force qt
 
       - name: Check Qt version
         run: qmake --version
