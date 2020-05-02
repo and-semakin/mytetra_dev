@@ -13,14 +13,27 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Install QT
+      - name: Update Homebrew
+        run: brew update
+
+      - name: Install Qt
         run: |
-          brew update
           brew install qt
           brew link qt
 
+      - name: Check Qt version
+        run: qmake --version
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+
+      - name: Show git info
+        run: git status
+
+      - name: Build MyTetra
+        run: |
+          qmake .
+          make
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -29,8 +42,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
           pwd
           echo ===========
           ls -l
+          echo ===========
+          ls -l bin/
