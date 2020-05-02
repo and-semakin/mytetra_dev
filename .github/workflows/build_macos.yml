@@ -15,11 +15,14 @@ jobs:
     steps:
       - name: Update Homebrew
         run: brew update
+#
+#      - name: Install Qt
+#        run: |
+#          brew install qt
+#          brew link --force qt
 
       - name: Install Qt
-        run: |
-          brew install qt
-          brew link --force qt
+        uses: jurplel/install-qt-action@v2
 
       - name: Check Qt version
         run: qmake --version

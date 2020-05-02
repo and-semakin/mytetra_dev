@@ -13,6 +13,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name Install build tools
+      - run: |
+          choco install make
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v2
+
 #      - name: Install build tools
 #        run: |
 #          sudo apt-get update
