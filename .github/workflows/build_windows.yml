@@ -19,7 +19,7 @@ jobs:
 
       - name: wtf
         run: |
-          Get-ChildItem -Path C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise -Force -Recurse
+          Get-ChildItem -Path "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" -Force -Recurse
 
       - name: Install Qt
         uses: jurplel/install-qt-action@v2
