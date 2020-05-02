@@ -18,13 +18,16 @@ jobs:
           sudo apt-get update
           sudo apt-get install build-essential
 
-      - name: Add Stephan Binner's Qt PPA
-        run: |
-          sudo add-apt-repository ppa:beineri/opt-qt-5.12.8-bionic
-          sudo apt-get update
+#      - name: Add Stephan Binner's Qt PPA
+#        run: |
+#          sudo add-apt-repository ppa:beineri/opt-qt-5.12.8-bionic
+#          sudo apt-get update
+#
+#      - name: Install Qt
+#        run: sudo apt-get install qt512-meta-full
 
       - name: Install Qt
-        run: sudo apt-get install qt512-meta-full
+        run: sudo apt-get install qt5-default
 
       - name: Check Qt version
         run: qmake --version
