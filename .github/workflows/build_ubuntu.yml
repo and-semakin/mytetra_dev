@@ -27,7 +27,7 @@ jobs:
 #        run: sudo apt-get install qt512-meta-full
 
       - name: Install Qt
-        run: sudo apt-get install qt5-default
+        run: sudo apt-get install qt5-default libqt5svg5
 
       - name: Check Qt version
         run: qmake --version
