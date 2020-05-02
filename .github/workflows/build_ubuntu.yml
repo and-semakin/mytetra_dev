@@ -16,7 +16,7 @@ jobs:
       - name: Install build tools
         run: |
           sudo apt-get update
-          sudo apt-get install build-essential
+          sudo apt-get install -y build-essential
 
 #      - name: Add Stephan Binner's Qt PPA
 #        run: |
@@ -27,7 +27,7 @@ jobs:
 #        run: sudo apt-get install qt512-meta-full
 
       - name: Install Qt
-        run: sudo apt-get install qt5-default libqt5svg5
+        run: sudo apt-get install -y qt5-default libqt5svg5-dev
 
       - name: Check Qt version
         run: qmake --version
