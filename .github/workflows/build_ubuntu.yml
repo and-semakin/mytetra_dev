@@ -51,4 +51,6 @@ jobs:
           echo ===========
           ls -l
           echo ===========
-          ls -l bin/
+          ls -l app/
+          echo ===========
+          ls -l app/bin/
